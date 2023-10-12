@@ -7,7 +7,7 @@ instagram_basic_display = InstagramBasicDisplay(app_id='631172465595715', app_se
 st.write(instagram_basic_display.get_login_url())
 
 # Get the OAuth callback code
-code = request.args.get('code')
+code = requests.args.get('code')
 
 # Get the short lived access token (valid for 1 hour)
 short_lived_token = instagram_basic_display.get_o_auth_token(code)
