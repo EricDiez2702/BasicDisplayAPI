@@ -8,7 +8,7 @@ st.write(instagram_basic_display.get_login_url())
 
 code = st.text_input("Entrez le code d'authentification :")
 
-if code =! null:
+if code != null:
     API_URL = "https://api.instagram.com/oauth/access_token"
     data = {
         "client_id":'631172465595715',
