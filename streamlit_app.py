@@ -34,7 +34,7 @@ if code_recu:
     data = response1.json()
 
     user_id = data.get('user_id')
-    token = data.get('access_token')
+    access_token = data.get('access_token')
     fields = 'id,username'
     
     token_recu = st.checkbox("Echange du code contre un token réussi")
