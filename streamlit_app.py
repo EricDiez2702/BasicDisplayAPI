@@ -37,11 +37,7 @@ if code_recu:
     access_token = data.get('access_token')
     fields = 'id,username'
 
-    st.write(user_id)
-    st.write(access_token)
-
     accountUrl = f'https://graph.instagram.com/{user_id}?fields={fields}&access_token={access_token}'
-    st.write(accountUrl)
     response2 = requests.get(accountUrl)
     
     if response2.status_code == 200:
