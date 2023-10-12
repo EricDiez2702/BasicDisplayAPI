@@ -36,6 +36,9 @@ if code_recu:
     user_id = data.get('user_id')
     access_token = data.get('access_token')
     fields = 'id,username'
+
+    st.write(user_id)
+    st.write(access_token)
     
     token_recu = st.checkbox("Echange du code contre un token réussi")
     
