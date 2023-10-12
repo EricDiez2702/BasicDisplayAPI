@@ -42,5 +42,8 @@ if code_recu:
     if token_recu:
         accountUrl = f'https://graph.instagram.com/{user_id}?fields={fields}&access_token={access_token}'
         response2 = requests.get(accountUrl)
-        st.write(response2.json())
+        if response2.status_code == 200:
+            st.write(response2.json())
+        else:
+            st.write(f"La requête a échoué, code d'etat {response.status_code}.")
 
