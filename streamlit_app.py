@@ -29,7 +29,7 @@ if code_recu:
     }
     
     response1 = requests.post(apiUrl, data)
-    st.write(response1.json())
+    #st.write(response1.json())
 
     data = response1.json()
 
