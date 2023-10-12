@@ -15,4 +15,4 @@ short_lived_token = instagram_basic_display.get_o_auth_token(code)
 # Exchange this token for a long lived token (valid for 60 days)
 long_lived_token = instagram_basic_display.get_long_lived_token(short_lived_token.get('access_token'))
 
-print('Your token is: {}' .format(long_lived_token.access_token))
+st.write('Your token is: {}' .format(long_lived_token.access_token))
