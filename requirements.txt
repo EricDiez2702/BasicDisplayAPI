@@ -1,0 +1,1 @@
+instagram-basic-display==1.2.0
