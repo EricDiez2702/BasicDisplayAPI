@@ -12,7 +12,7 @@ data = {
     "client_secret":'74c6eb8f791cb341222af420802db667',
     "grant_type": "authorization_code",
     "redirect_uri":'https://basicdisplayapi-kkg3fuibtjua4gvin89ggb.streamlit.app/',
-    "code":'AQDZxtkN7zaK5ypFEhR2QaynKStZwad1DH8ezyD9FMvDoyCaehtQhyZ3vHLGuw9BkfeEOl5J-jise6ErJZnYrDMSRPDgJ8QDwibuqGyK2Cg_L0AFcmb-vgUr1i_NapLB15JtffzktwRZlZS7Oo3yAbBA0AZdk-GbKToI1FxPaeNmnkyfGhOw6OBpFHo_5SSuY3LfLs8WyCqzzvecUXHy1BOx8lfSI-n0o0kxZdUvPI0Wag&state=60d6c5e9-3d9b-411c-81f8-9d6fc69dc529'
+    "code":'AQCiIXlY2tWvitBb84v0wv6crFHm-kKEGS5xrGJ8TjidUpdj6fIlkpZPBKmtXvtZevua4OXeAN1aHV_LaHXSPLbz9Go7fJsaK5tSc4jvQUP6B2cu2BCOj3_c1ipRmJaTuJ2Mgo-pbF1yA8xlzY5nzsey_SEAb228WjwrSBSAAHxY3meR6lY61dfd7_OhoS2uNqtcGXiggkO6K0d9FNmQtr08L_bcH-w2NhcsXDZYNa5dQQ&state=60d6c5e9-3d9b-411c-81f8-9d6fc69dc529'
 }
 
 response = requests.post(API_URL, data)
