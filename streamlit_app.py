@@ -41,6 +41,6 @@ if code_recu:
     
     if token_recu:
         accountUrl = f'https://graph.instagram.com/{user_id}?fields={fields}&access_token={access_token}'
-        response2 = request.get(accountUrl)
+        response2 = requests.get(accountUrl)
         st.write(response.json())
 
