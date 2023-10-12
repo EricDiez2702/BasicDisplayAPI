@@ -29,7 +29,7 @@ if code_recu:
     }
     
     response1 = requests.post(apiUrl, data)
-    #st.write(response1.json())
+    st.write(response1.json())
 
     data = response1.json()
 
@@ -45,5 +45,5 @@ if code_recu:
         if response2.status_code == 200:
             st.write(response2.json())
         else:
-            st.write(f"La requête a échoué, code d'etat {response.status_code}.")
+            st.write(f"La requête a échoué, code d'etat {response2.status_code}.")
 
