@@ -45,7 +45,7 @@ if code_recu:
     else:
         st.write(f"La requête a échoué, code d'etat {response2.status_code}.")
 
-    mediaUrl = f'https://graph.instagram.com/{user_id}/media?fields=id,caption&access_token={access_token}'
+    mediaUrl = f'https://graph.instagram.com/{user_id}/media?fields=id,caption,media_type,media_url,timestamp&access_token={access_token}'
     response3 = requests.get(mediaUrl)
 
     if response3.status_code == 200:
