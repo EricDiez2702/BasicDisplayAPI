@@ -11,7 +11,7 @@ code = st.text_input("Entrez le code d'authentification :")
 code_recu = st.checkbox("Code reçu")
 
 if code_recu:
-    API_URL = "https://api.instagram.com/oauth/access_token"
+    url = "https://api.instagram.com/oauth/access_token"
     data = {
         "client_id":'631172465595715',
         "client_secret":'74c6eb8f791cb341222af420802db667',
@@ -20,5 +20,5 @@ if code_recu:
         "code":code
     }
     
-    response = requests.post(API_URL, data)
+    response = requests.post(url, data)
     st.write(response.json())
