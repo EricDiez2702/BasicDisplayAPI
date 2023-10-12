@@ -16,4 +16,4 @@ data = {
 }
 
 response = requests.post(API_URL, data)
-print(response.json())
+st.write(response.json())
