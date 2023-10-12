@@ -39,15 +39,13 @@ if code_recu:
 
     st.write(user_id)
     st.write(access_token)
+
+    accountUrl = f'https://graph.instagram.com/{user_id}?fields={fields}&access_token={access_token}'
+    st.write(accountUrl)
+    response2 = requests.get(accountUrl)
     
-    token_recu = st.checkbox("Echange du code contre un token réussi")
-    
-    if token_recu:
-        accountUrl = f'https://graph.instagram.com/{user_id}?fields={fields}&access_token={access_token}'
-        st.write(accountUrl)
-        response2 = requests.get(accountUrl)
-        if response2.status_code == 200:
-            st.write(response2.json())
-        else:
-            st.write(f"La requête a échoué, code d'etat {response2.status_code}.")
+    if response2.status_code == 200:
+        st.write(response2.json())
+    else:
+        st.write(f"La requête a échoué, code d'etat {response2.status_code}.")
 
