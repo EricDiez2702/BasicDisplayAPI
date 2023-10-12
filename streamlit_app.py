@@ -40,7 +40,7 @@ if code_recu:
     token_recu = st.checkbox("Echange du code contre un token réussi")
     
     if token_recu:
-        accountUrl = f'https://graph.instagram.com/{user_id}?fields={fields}&access_token={access_token}'
+        accountUrl = f'https://graph.instagram.com/{user_id}&fields={fields}&access_token={access_token}'
         response2 = requests.get(accountUrl)
         if response2.status_code == 200:
             st.write(response2.json())
