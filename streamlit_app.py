@@ -1,10 +1,7 @@
 import streamlit as st
-from instagram_basic_display.InstagramBasicDisplay import InstagramBasicDisplay
 import requests
 
 st.title("Basic Display API")
-#instagram_basic_display = InstagramBasicDisplay(app_id='631172465595715', app_secret='74c6eb8f791cb341222af420802db667', redirect_url='https://basicdisplayapi-kkg3fuibtjua4gvin89ggb.streamlit.app/')
-#st.write(instagram_basic_display.get_login_url())
 
 OauthUrl = "https://api.instagram.com/oauth/authorize"
 params = {
@@ -33,3 +30,15 @@ if code_recu:
     
     response1 = requests.post(apiUrl, data)
     st.write(response1.json())
+
+    user_id = st.text_input("Entrer Id utilisateur :")
+    token = st.text_input("Entrer le token :")
+    fields = 'id,username'
+    
+    token_recu = st.checkbox("Echange du code contre un token réussi")
+    
+    if token_recu:
+        accountUrl = f'https://graph.instagram.com/{user_id}?fields={fields}&access_token={access_token}'
+        response2 = request.get(accountUrl)
+        st.write(response.json())
+
