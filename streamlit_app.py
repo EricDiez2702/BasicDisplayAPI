@@ -12,7 +12,7 @@ params = {
 }
 
 response = requests.get(OauthUrl, params)
-#st.write(response.url)
+st.write(response.url)
 
 code = st.text_input("Entrez le code d'authentification :")
 
