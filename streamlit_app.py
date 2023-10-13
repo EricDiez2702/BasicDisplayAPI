@@ -54,5 +54,5 @@ if code_recu:
     else:
         st.write(f"La requête a échoué, code d'etat {resposne3.status_code}.")
 
-    firstMedia = response3.json(0)
-    st.write(firstMedia)
+    listMedia = response3.json()
+    st.write(firstMedia[0])
