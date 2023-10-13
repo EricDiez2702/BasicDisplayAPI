@@ -67,7 +67,7 @@ if code_recu:
     st.write(response4.json())
 
 
-    
+    st.write("Les différents posts et médias associés :")
     json_obj = json.loads(response3.content)
 
     for i in json_obj['media_type']:
