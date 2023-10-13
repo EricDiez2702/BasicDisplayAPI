@@ -42,6 +42,7 @@ if code_recu:
     access_token = data.get('access_token')
     fields = 'id,username'
 
+    st.write("Id et Username :")
     accountUrl = f'https://graph.instagram.com/{user_id}?fields={fields}&access_token={access_token}'
     response2 = requests.get(accountUrl)
     
@@ -50,7 +51,7 @@ if code_recu:
     else:
         st.write(f"La requête a échoué, code d'etat {response2.status_code}.")
 
-    
+    st.write("Liste des différents posts :")
     mediaListUrl = f'https://graph.instagram.com/{user_id}/media?fields=id,caption,media_type,media_url,timestamp&access_token={access_token}'
     response3 = requests.get(mediaListUrl)
     st.write(type(response3))
@@ -60,7 +61,7 @@ if code_recu:
     else:
         st.write(f"La requête a échoué, code d'etat {response3.status_code}.")
 
-    
+    st.write("Liste des media d'un même post :")
     testFirstMediaUrl = f'https://graph.instagram.com/18063413599377238/children?fields=id,media_type,media_url&access_token={access_token}'
     response4 = requests.get(testFirstMediaUrl)
     st.write(response4.json())
