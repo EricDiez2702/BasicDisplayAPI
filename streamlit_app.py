@@ -55,7 +55,7 @@ if code_recu:
     else:
         st.write(f"La requête a échoué, code d'etat {resposne3.status_code}.")
 
-    json_obj = json.load(response3.content)
+    json_obj = json.loads(response3.content)
 
     for i in json_obj['media_type']:
         if i == "CAROUSEL_ALBUM":
