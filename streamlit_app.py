@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import json
 
 st.title("Basic Display API")
 
@@ -45,11 +46,22 @@ if code_recu:
     else:
         st.write(f"La requête a échoué, code d'etat {response2.status_code}.")
 
-    mediaUrl = f'https://graph.instagram.com/{user_id}/media?fields=id,caption,media_type,media_url,timestamp&access_token={access_token}'
-    response3 = requests.get(mediaUrl)
+    mediaListUrl = f'https://graph.instagram.com/{user_id}/media?fields=id,caption,media_type,media_url,timestamp&access_token={access_token}'
+    response3 = requests.get(mediaListUrl)
     st.write(type(response3))
 
     if response3.status_code == 200:
         st.write(response3.json())
     else:
         st.write(f"La requête a échoué, code d'etat {resposne3.status_code}.")
+
+    json_obj = json.load(response3.content)
+
+    for i in json_obj['media_type']:
+        if i == "CAROUSEL_ALBUM":
+            id = json_obj['id']
+            mediaUrl = f'https://graph.instagram.com/{id}/children?fields=id,media_type,media_url&access_token={access_token}'
+            response4 = requests.get(mediaUrl)
+            st.write(response4.json())
+
+
