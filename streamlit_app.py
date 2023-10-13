@@ -4,7 +4,7 @@ import json
 
 st.title("Basic Display API")
 
-//Création de l'URL d'autorisation 
+//Création de URL d'autorisation 
 OauthUrl = "https://api.instagram.com/oauth/authorize"
 params = {
     'client_id':'631172465595715',
