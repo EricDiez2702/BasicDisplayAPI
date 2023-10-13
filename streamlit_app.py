@@ -52,4 +52,6 @@ if code_recu:
         st.write(response3.json())
     else:
         st.write(f"La requête a échoué, code d'etat {resposne3.status_code}.")
-        
+
+    firstMedia = response3.json(0)
+    st.write(firstMedia)
